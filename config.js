@@ -1,5 +1,5 @@
 System.config({
-  baseURL: "/",
+  baseURL: "/p-008-prototype-live/",
   defaultJSExtensions: true,
   transpiler: "babel",
   babelOptions: {
