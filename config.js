@@ -1077,6 +1077,12 @@ System.config({
     "npm:esrecurse@4.2.0.js": [
       "npm:esrecurse@4.2.0/esrecurse.js"
     ],
+    "npm:escope@3.6.0/lib/definition.js": [
+      "./variable"
+    ],
+    "npm:es6-map@0.1.5.js": [
+      "npm:es6-map@0.1.5/index"
+    ],
     "github:jspm/nodelibs-assert@0.1.0/index.js": [
       "assert"
     ],
@@ -1084,13 +1090,11 @@ System.config({
       "estraverse",
       "esrecurse"
     ],
-    "npm:escope@3.6.0/lib/definition.js": [
-      "./variable"
-    ],
-    "npm:es6-map@0.1.5.js": [
-      "npm:es6-map@0.1.5/index"
-    ],
     "npm:es6-weak-map@2.0.2/index.js": [
+      "./is-implemented",
+      "./polyfill"
+    ],
+    "npm:es6-map@0.1.5/index.js": [
       "./is-implemented",
       "./polyfill"
     ],
@@ -1101,10 +1105,6 @@ System.config({
       "object-assign",
       "estraverse",
       "./package.json!systemjs-json"
-    ],
-    "npm:es6-map@0.1.5/index.js": [
-      "./is-implemented",
-      "./polyfill"
     ],
     "npm:object-assign@4.1.1.js": [
       "npm:object-assign@4.1.1/index"
@@ -1122,6 +1122,20 @@ System.config({
       "es6-iterator/get",
       "es6-iterator/for-of",
       "es6-symbol",
+      "./is-native-implemented"
+    ],
+    "npm:es6-map@0.1.5/polyfill.js": [
+      "es5-ext/array/#/clear",
+      "es5-ext/array/#/e-index-of",
+      "es5-ext/object/set-prototype-of",
+      "es5-ext/object/valid-callable",
+      "es5-ext/object/valid-value",
+      "d",
+      "event-emitter",
+      "es6-symbol",
+      "es6-iterator/valid-iterable",
+      "es6-iterator/for-of",
+      "./lib/iterator",
       "./is-native-implemented"
     ],
     "github:jspm/nodelibs-buffer@0.1.1.js": [
@@ -1143,20 +1157,6 @@ System.config({
     "npm:ieee754@1.1.8.js": [
       "npm:ieee754@1.1.8/index.js"
     ],
-    "npm:es6-map@0.1.5/polyfill.js": [
-      "es5-ext/array/#/clear",
-      "es5-ext/array/#/e-index-of",
-      "es5-ext/object/set-prototype-of",
-      "es5-ext/object/valid-callable",
-      "es5-ext/object/valid-value",
-      "d",
-      "event-emitter",
-      "es6-symbol",
-      "es6-iterator/valid-iterable",
-      "es6-iterator/for-of",
-      "./lib/iterator",
-      "./is-native-implemented"
-    ],
     "npm:util@0.10.3.js": [
       "npm:util@0.10.3/util.js"
     ],
@@ -1175,20 +1175,6 @@ System.config({
     "npm:es6-symbol@3.1.1.js": [
       "npm:es6-symbol@3.1.1/index"
     ],
-    "npm:es6-iterator@2.0.3/get.js": [
-      "es5-ext/function/is-arguments",
-      "es5-ext/string/is-string",
-      "./array",
-      "./string",
-      "./valid-iterable",
-      "es6-symbol"
-    ],
-    "npm:es6-iterator@2.0.3/for-of.js": [
-      "es5-ext/function/is-arguments",
-      "es5-ext/object/valid-callable",
-      "es5-ext/string/is-string",
-      "./get"
-    ],
     "npm:es5-ext@0.10.35/array/#/clear.js": [
       "../../object/valid-value"
     ],
@@ -1202,6 +1188,20 @@ System.config({
     ],
     "npm:es6-iterator@2.0.3/valid-iterable.js": [
       "./is-iterable"
+    ],
+    "npm:es6-iterator@2.0.3/get.js": [
+      "es5-ext/function/is-arguments",
+      "es5-ext/string/is-string",
+      "./array",
+      "./string",
+      "./valid-iterable",
+      "es6-symbol"
+    ],
+    "npm:es6-iterator@2.0.3/for-of.js": [
+      "es5-ext/function/is-arguments",
+      "es5-ext/object/valid-callable",
+      "es5-ext/string/is-string",
+      "./get"
     ],
     "npm:es6-map@0.1.5/lib/iterator.js": [
       "es5-ext/object/set-prototype-of",
@@ -1224,6 +1224,16 @@ System.config({
       "./is-implemented",
       "./polyfill"
     ],
+    "npm:es5-ext@0.10.35/number/is-nan/index.js": [
+      "./is-implemented",
+      "./shim"
+    ],
+    "npm:es5-ext@0.10.35/number/to-pos-integer.js": [
+      "./to-integer"
+    ],
+    "npm:es6-iterator@2.0.3.js": [
+      "npm:es6-iterator@2.0.3/index"
+    ],
     "npm:util@0.10.3/util.js": [
       "./support/isBufferBrowser",
       "inherits",
@@ -1234,6 +1244,16 @@ System.config({
       "es5-ext/object/normalize-options",
       "es5-ext/object/is-callable",
       "es5-ext/string/#/contains"
+    ],
+    "npm:event-emitter@0.3.5/index.js": [
+      "d",
+      "es5-ext/object/valid-callable"
+    ],
+    "npm:es6-iterator@2.0.3/is-iterable.js": [
+      "es5-ext/function/is-arguments",
+      "es5-ext/object/is-value",
+      "es5-ext/string/is-string",
+      "es6-symbol"
     ],
     "npm:es6-iterator@2.0.3/array.js": [
       "es5-ext/object/set-prototype-of",
@@ -1248,26 +1268,6 @@ System.config({
       "es6-symbol",
       "./index"
     ],
-    "npm:es5-ext@0.10.35/number/is-nan/index.js": [
-      "./is-implemented",
-      "./shim"
-    ],
-    "npm:es5-ext@0.10.35/number/to-pos-integer.js": [
-      "./to-integer"
-    ],
-    "npm:es6-iterator@2.0.3.js": [
-      "npm:es6-iterator@2.0.3/index"
-    ],
-    "npm:event-emitter@0.3.5/index.js": [
-      "d",
-      "es5-ext/object/valid-callable"
-    ],
-    "npm:es6-iterator@2.0.3/is-iterable.js": [
-      "es5-ext/function/is-arguments",
-      "es5-ext/object/is-value",
-      "es5-ext/string/is-string",
-      "es6-symbol"
-    ],
     "npm:es6-map@0.1.5/lib/iterator-kinds.js": [
       "es5-ext/object/primitive-set"
     ],
@@ -1275,6 +1275,9 @@ System.config({
       "../is-object",
       "../valid-value",
       "../create"
+    ],
+    "npm:es5-ext@0.10.35/number/to-integer.js": [
+      "../math/sign/index"
     ],
     "npm:inherits@2.0.1.js": [
       "npm:inherits@2.0.1/inherits_browser.js"
@@ -1302,23 +1305,24 @@ System.config({
       "d/auto-bind",
       "es6-symbol"
     ],
-    "npm:es5-ext@0.10.35/number/to-integer.js": [
-      "../math/sign/index"
-    ],
     "npm:es5-ext@0.10.35/object/create.js": [
       "./set-prototype-of/is-implemented",
       "./set-prototype-of/shim"
+    ],
+    "npm:es5-ext@0.10.35/math/sign/index.js": [
+      "./is-implemented",
+      "./shim"
     ],
     "npm:es5-ext@0.10.35/object/assign/index.js": [
       "./is-implemented",
       "./shim"
     ],
-    "npm:es6-symbol@3.1.1/validate-symbol.js": [
-      "./is-symbol"
-    ],
     "npm:es5-ext@0.10.35/string/#/contains/index.js": [
       "./is-implemented",
       "./shim"
+    ],
+    "npm:es6-symbol@3.1.1/validate-symbol.js": [
+      "./is-symbol"
     ],
     "npm:d@1.0.0/auto-bind.js": [
       "es5-ext/object/copy",
@@ -1326,10 +1330,6 @@ System.config({
       "es5-ext/object/valid-callable",
       "es5-ext/object/map",
       "es5-ext/object/valid-value"
-    ],
-    "npm:es5-ext@0.10.35/math/sign/index.js": [
-      "./is-implemented",
-      "./shim"
     ],
     "npm:es5-ext@0.10.35/object/assign/shim.js": [
       "../keys/index",
@@ -1390,7 +1390,7 @@ System.config({
     ]
   },
   bundles: {
-    "app-build-7512a25e10.js": [
+    "app-build-63eed41b01.js": [
       "app.html!github:systemjs/plugin-text@0.0.8.js",
       "app.js",
       "editor.js",
